@@ -1,0 +1,30 @@
+version: '3'
+services:
+  db_api:
+    image: postgres:11.10-alpine
+    container_name: db_api
+    ports:
+      - '5432'
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: latamgateway
+      POSTGRES_PASSWORD: latamgateway
+
+  web_api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        - USER_NAME=${USER:-root}
+        - USER_ID=${USER_ID:-1000}
+    stdin_open: true
+    tty: true
+    container_name: web_api
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/app/latamgateway_cep_api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db_api
