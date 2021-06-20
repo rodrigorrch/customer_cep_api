@@ -1,0 +1,123 @@
+---
+pt-BR:
+  date:
+    abbr_day_names:
+    - Dom
+    - Seg
+    - Ter
+    - Qua
+    - Qui
+    - Sex
+    - Sáb
+    abbr_month_names:
+    -
+    - Jan
+    - Fev
+    - Mar
+    - Abr
+    - Mai
+    - Jun
+    - Jul
+    - Ago
+    - Set
+    - Out
+    - Nov
+    - Dez
+    day_names:
+    - Domingo
+    - Segunda-feira
+    - Terça-feira
+    - Quarta-feira
+    - Quinta-feira
+    - Sexta-feira
+    - Sábado
+    formats:
+      default: "%d/%m/%Y"
+      long: "%d de %B de %Y"
+      short: "%d de %B"
+    month_names:
+    -
+    - Janeiro
+    - Fevereiro
+    - Março
+    - Abril
+    - Maio
+    - Junho
+    - Julho
+    - Agosto
+    - Setembro
+    - Outubro
+    - Novembro
+    - Dezembro
+    order:
+    - :day
+    - :month
+    - :year
+
+  actions:
+    show: Exibir
+    edit: Editar
+    destroy: Excluir
+    new: Novo
+    back: Voltar
+
+  helpers:
+    submit:
+      create: "Criar %{model}"
+      update: "Alterar %{model}"
+
+  confirm: Você tem certeza?
+
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      soft_delete_failed: "%{model} já está em uso."
+      no_help_found_for_this_action: Nenhuma ajuda encontrada para essa tela
+      address_not_found: Endereço não localizado
+      required_search_parameter: É necessário informar ao menos um parâmetro para pesquisa
+      accepted: deve ser aceito
+      blank: não pode ficar em branco
+      present: deve ficar em branco
+      confirmation: não é igual a %{attribute}
+      empty: não pode ficar vazio
+      equal_to: deve ser igual a %{count}
+      even: deve ser par
+      exclusion: não está disponível
+      greater_than: deve ser maior que %{count}
+      greater_than_or_equal_to: deve ser maior ou igual a %{count}
+      inclusion: não está incluído na lista
+      invalid: não é válido
+      less_than: deve ser menor que %{count}
+      less_than_or_equal_to: deve ser menor ou igual a %{count}
+      not_a_number: não é um número
+      not_an_integer: não é um número inteiro
+      odd: deve ser ímpar
+      record_invalid: "A validação falhou: %{errors}"
+      restrict_dependent_destroy:
+        has_one: Não é possível excluir o registro pois existe um(a) %{record} dependente
+        has_many: Não é possível excluir o registro pois existem %{record} dependentes
+      taken: já está em uso
+      too_long: "é muito longo (máximo: %{count} caracteres)"
+      too_short: "é muito curto (mínimo: %{count} caracteres)"
+      wrong_length: não possui o tamanho esperado (%{count} caracteres)
+      other_than: deve ser diferente de %{count}
+      save_before_calculate: "* existem alterações pendentes, salve o formulário para recalcular"
+      locked_model: "%{model} não permite alterações"
+      locked_attribute: "não permite alterações"
+      invalid_transition: "não pôde ser alterado"
+      must_be_informed: deve ser informado
+      must_be_different: deve ser diferente
+      invalid_verifying_digit: dígito verificador inválido
+      invalid_document_type: tipo de documento incorreto
+      invalid_format: é inválido
+      requires_custom_smtp_for_multiple: só permite múltiplos para SMTP próprio
+      invalid_multiple_emails: é inválido, utilize ';' para separar múltiplos e-mails
+      linked_association: vinculado(a)
+      already_in_use: já está em uso
+      required: deve ser informado
+      already_processing: Já existe uma solicitação em processamento para esse registro. Aguarde o retorno ou atualize a página para continuar.
+    template:
+      body: "Por favor, verifique o(s) seguinte(s) campo(s):"
+      header:
+        one: "Não foi possível gravar %{model}: 1 erro"
+        other: "Não foi possível gravar %{model}: %{count} erros."

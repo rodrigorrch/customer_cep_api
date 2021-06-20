@@ -10,6 +10,8 @@ module Authentication
       user = User.find_by(api_token: api_token)
 
       if user.present? && validate_token(user)
+        CurrentSession.user = user
+
         success! user  
       else
         fail!('Login não autorizado ou token inválido')

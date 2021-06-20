@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::API
+  include ActionController::MimeResponds
   include AuthenticatedController
+  include ResourceHelpers
 
   respond_to :json
 

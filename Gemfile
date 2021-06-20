@@ -8,6 +8,9 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'devise'
 gem 'figaro'
+gem 'httparty'
+gem 'jbuilder'
+gem 'kaminari'
 gem 'versionist'
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -26,11 +29,11 @@ group :development, :test do
   gem 'rubocop-faker'
   gem 'rubocop-rails', require: false
   gem 'rubocop'
+  gem 'simplecov', require: false
 end
 
 group :development do
   gem 'listen', '~> 3.3'
-  gem 'simplecov', require: false
   gem 'spring'
 end
 
