@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :user do
     id { 1 }
-    email { 'rodrigo@latamgateway.com' }
+    email { 'rodrigo.rrch@gmail.com' }
     password { "123456" }
     name { 'Rodrigo' }
     api_token { '4638bccdcbce5fd1ad9efcbb972b599cde4fa462' }

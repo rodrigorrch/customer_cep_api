@@ -10,8 +10,8 @@ services:
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: latamgateway
-      POSTGRES_PASSWORD: latamgateway
+      POSTGRES_USER: customer
+      POSTGRES_PASSWORD: customer
 
   web_api:
     build: .
@@ -20,7 +20,7 @@ services:
     container_name: web_api
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
-      - .:/latamgateway_cep_api
+      - .:/customer_cep_api
     ports:
       - "3000:3000"
     depends_on:

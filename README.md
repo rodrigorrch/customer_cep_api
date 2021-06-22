@@ -8,12 +8,14 @@
 
 Crie o arquivo de variaveis de ambiente config/application.yml:
 
-DB_NAME: latamgateway
-DB_USERNAME: latamgateway
-DB_PASSWORD: latamgateway
+```bash
+DB_NAME: customer
+DB_USERNAME: customer
+DB_PASSWORD: customer
 DB_PORT: '5432'
 DB_HOST: db_api
 API_URL: https://ws.apicep.com/cep/
+```
 
 # Docker
 
@@ -35,8 +37,8 @@ docker-compose run web_api rails db:seed
 docker-compose up -d; docker attach web_api
 ```
 
-Obs: Se der o erro: "error from sender: open latamgateway_cep_api/tmp/db: permission denied"
-É problema de permissão na pasta temporaria e pode ser resolvido com chmod 777 -R latamgateway_cep_api/tmp/db
+Obs: Se der o erro: "error from sender: open customer_cep_api/tmp/db: permission denied"
+É problema de permissão na pasta temporaria e pode ser resolvido com chmod 777 -R customer_cep_api/tmp/db
 
 # Processo
 
