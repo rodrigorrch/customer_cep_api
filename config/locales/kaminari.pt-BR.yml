@@ -1,0 +1,18 @@
+---
+pt-BR:
+  helpers:
+    page_entries_info:
+      more_pages:
+        display_entries: Exibindo registros <b>%{first}&nbsp;-&nbsp;%{last}</b> de <b>%{total}</b>
+      one_page:
+        display_entries:
+          one: Exibindo <b>1</b> registro
+          other: Exibindo <b>%{count}</b> registros
+          zero: Nenhum registro encontrado
+  views:
+    pagination:
+      first: "&laquo; Início"
+      last: Última &raquo;
+      next: Próxima →
+      previous: "← Anterior"
+      truncate: "&hellip;"

@@ -1,6 +1,6 @@
 json.data do
   json.array! @resource_collection do |resource|
-    json.partial! 'v1/addresses/form', resource: resource
+    json.partial! 'api/v1/addresses/form', resource: resource
   end
 end
 

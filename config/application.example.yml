@@ -1,0 +1,7 @@
+DB_NAME: latamgateway
+DB_USERNAME: latamgateway
+DB_PASSWORD: latamgateway
+DB_PORT: '5432'
+DB_HOST: db_api
+
+API_URL: https://ws.apicep.com/cep/

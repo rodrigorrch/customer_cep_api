@@ -11,6 +11,7 @@ gem 'figaro'
 gem 'httparty'
 gem 'jbuilder'
 gem 'kaminari'
+gem 'webmock'
 gem 'versionist'
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -26,10 +27,12 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails', '~> 5.0.0'
+  gem 'rspec-json_expectations'
   gem 'rubocop-faker'
   gem 'rubocop-rails', require: false
   gem 'rubocop'
   gem 'simplecov', require: false
+  gem 'shoulda-matchers'
 end
 
 group :development do

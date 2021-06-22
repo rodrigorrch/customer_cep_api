@@ -33,7 +33,7 @@ module LatamgatewayCepApi
     # config.eager_load_paths << Rails.root.join("extras")
     config.time_zone = 'Brasilia'
     config.i18n.default_locale = :'pt-BR'
-    config.i18n.available_locales = %w[en-US pt-BR]
+    config.i18n.available_locales = %w[en pt-BR]
 
     # Postgresql
     config.active_record.schema_format = :sql

@@ -1,25 +1,32 @@
-module CepLa
+module Request
   class PostalCodeService < ApplicationService
     require 'httparty'
 
     include ActiveModel::Serializers::JSON
 
-    PARAMS = %i[cep uf cidade bairro logradouro].freeze
+    PARAMS = %i[status ok code state city district address statusText message].freeze
 
     attr_reader :end_point
     attr_accessor *PARAMS
 
     def initialize(postal_code)
-      @end_point = URI("#{api_url}#{postal_code}")
+      @end_point = URI("#{api_url}#{postal_code}.json")
+      @errors = ActiveModel::Errors.new(self)
     end
 
     def call
       response = HTTParty.get(end_point, headers: { 'Accept' => 'application/json' })
       result = from_json(response.body)
+
+      return @errors.add(:base, result.message) if result.try(:message).present?
+
+      result
     rescue HTTParty::Error => error
-      { success?: false, error: error }
-    else
-      { success?: true, payload: result }
+      @errors.add(:base, error.message)
+    end
+
+    def attributes
+      instance_values
     end
 
     private
